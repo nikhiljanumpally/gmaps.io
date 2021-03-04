@@ -1,0 +1,167 @@
+/* width */
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: grey;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: grey;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+    height: 100vh;
+}
+
+#map{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.title{
+    position: absolute;
+    font-size:3rem;
+    color: #333;
+    text-transform: uppercase;
+    z-index:100;
+    font-weight:bold;
+    top:100px;
+    left:100px;
+}
+
+.search-container{
+    position:absolute;
+    width:400px;
+    height:60px;
+    background-color:#454e53;
+    z-index: 100;
+    top:150px;
+    left:100px;
+    border-radius:30px;
+    display: flex;
+
+}
+
+.search{
+    flex-grow:1;
+    display:flex;
+    align-items:center;
+
+    padding-left:20px;
+    padding-right:20px;
+
+}
+
+#zip-code-input{
+    flex-grow:1;
+    font-size: 25px;
+    background-color:transparent;
+    border: none;
+    color:white;
+
+}
+.search-container input:focus {
+    outline:none;
+}
+
+.fas.fa-search{
+    font-size:25px;
+    color:white;
+}
+
+.store-list-container{
+    position:absolute;
+    background-color:whitesmoke;
+    width:400px;
+    z-index: 100;
+    top:220px;
+    left:100px;
+    border-radius:30px;
+    bottom:40px;
+    display: flex;
+    overflow-y: hidden;
+}
+
+.store-address{
+    font-size:21px;
+    color:#514c4c;
+    margin-top:30px ;
+
+}
+.store-phone-number{
+    color:#b5adad;
+    margin-top:15px;
+    margin-bottom:15px;
+}
+
+.store-number{
+    width:30px;
+    height:30px;
+    display: flex;
+    background-color:#454e53;
+    color:#b5adad;
+    align-items:center;
+    justify-content: center;
+    border-radius:50%;
+
+}
+
+.store-address span{
+    display: block;
+}
+
+.stores-list{
+    padding-left:20px;
+    padding-right:20px;
+
+    overflow-y:scroll ;
+    flex-grow:1;
+
+}
+
+.store-container-background{
+    display: flex;
+    padding-left:8px;
+    padding-right:8px;
+    cursor:pointer;
+    /*background-color:#ccc;*/
+    margin-top:12px;
+    margin-bottom:12px;
+    border-radius:18px;
+    transition: all 0.2s ease-in-out;
+}
+.store-info-container{
+    flex-grow: 1;
+}
+
+.store-number-container{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.store-container{
+    border-bottom: 1.5px solid #979797;
+}
+
+.store-container-background:hover{
+    background-color:#ccc;
+}

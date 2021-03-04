@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Google Maps Store Locator</title>
+        <script src="https://kit.fontawesome.com/c939d0e917.js"></script>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+    <div class="title">Store locator</div>
+
+    <div class="search-container">
+        <div class="search">
+
+            <input type="text" id="zip-code-input" placeholder="enter zip" >
+            <i class="fas fa-search fa-flip-horizontal" onclick="searchStores()" ></i>
+        </div>
+    </div>
+    <div class="store-list-container">
+        <div class="stores-list">
+            <div class="store-container">
+                <div class="store-container-background">
+                    <div class="store-info-container">
+                        <div class="store-address">
+                            <span>257 S. La Cienega Blvd.</span>
+                            <span>257 S. La Cienega Blvd.</span>
+
+                        </div>
+                        <div class="store-phone-number">
+                            234-456
+                        </div>
+                    </div>
+                    <div class="store-number-container">
+                        <div class="store-number">1</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="map"></div>
+    <script>
+        function initMap(){
+            var sydney={lat:-33.863276,lng:151.107977};
+            map=new google.maps.Map(document.getElementById('map'),{
+                center:sydney,
+                zoom:11,
+            });
+        }
+    </script>
+    <script src="./index.js"></script>
+    <script src="./store-data.js"></script>
+<!--    <iframe width='100%' height='100%' id='mapcanvas' src='https://maps.google.com/maps?q=losAngeles&amp;t=&amp;z=10&amp;ie=UTF8&amp;iwloc=&amp;output=embed' frameborder='0' scrolling='no' marginheight='0' marginwidth='0'><div class="zxos8_gm"><a href="https://www.compareboilercover.co.uk">https://www.compareboilercover.co.uk</a></div><div style='overflow:hidden;'><div id='gmap_canvas' style='height:100%;width:100%;'></div></div><div><small>Powered by <a href="https://www.embedgooglemap.co.uk">Embed Google Map</a></small></div></iframe>-->
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbIlN2tOAcr4QWW7hSxkE--Z1YNmQRXM8&callback=initMap"></script>
+    </body>
+</html>
